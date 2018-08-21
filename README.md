@@ -33,5 +33,5 @@ lio no desenvolvimento. *Ex: jquery*
 ### **Bonus** ###
 * Usar Flexbox no css
 * Modularização do javascript (Separação de responsabilidades)
-* Modularização do css (separar de responsabilidade
+* Modularização do css (Separação de responsabilidade)
 * Programação funcional
