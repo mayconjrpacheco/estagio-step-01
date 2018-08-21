@@ -1,0 +1,49 @@
+body{
+    padding: 0;
+    margin: 0
+}
+
+.nav-bar{
+    background-color: #2c3e50;
+    height: 70px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 1%
+}
+
+.logo{
+    width: 10%;
+    display: flex;
+}
+
+input{
+    border: none;
+    width: 80%;
+    height: 80%;
+    font-size: 130%;
+    font-weight: 300
+}
+
+.search-field{
+    width: 60%;
+    height: 30px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    margin-left: 20%;
+    background-color: white
+}
+
+textarea:focus, input:focus{
+    outline: none
+}
+
+
+
+@media only screen and (max-width: 1150px){
+    .nav-bar{
+        margin: 0;
+        width: 100%
+    }
+}
