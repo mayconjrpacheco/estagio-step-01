@@ -82,21 +82,21 @@ body{
 
 .container-conteudo{
     display: flex;
-    background-color: #F9F9F9;
+    background-color:#F9F9F9;
     
 }
 
-.container-conteudo .lateral-navbar{
+.lateral-navbar{
     display: flex;
     flex-direction: column;
     height: calc(100vh - 70px);
-    width: 12%;
+    width: 15%;
     background-color: white;
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 
 }
 
-.fa-list, .fa-check-double, .fa-trash{
+.fa-list, .fa-check-double, .fa-trash, .fa-check{
     color: #87868A;
     margin-top: 20%;
     margin-left: 15%;
@@ -104,20 +104,72 @@ body{
 }
 
 
-.container-conteudo .listagem{
+.listagem{
     display: flex;
     flex-direction: row;
     align-content: flex-start;
     width: 85%;
     height: 70px; 
-    margin-top: 2%;
-    margin-left: 2%;
-    margin-right: 2%;
-    background-color: rgb(77, 155, 41);
+    border-radius: 5px;
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E0E0E0;
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 }
 
-.listagem{
+.listagem img{
+    margin-top: 15%;
+    margin-left: 20%;
+    border-radius: 50%;
+}
+
+.listagem a{
+    font-size: 15px;
+}
+
+.listagem .foto{
     display: flex;
-    border-radius: 5px;
+    margin-top: 0.3%;
+    width: 8%;
+}
+
+.listagem .nome{
+    display: flex;
+    color: #2C3E50;
+    margin-top: 2.3%;
+    font-size: 20px;
+    width: 15%;
+}
+
+.listagem .email{
+    display: flex;
+    color: #B4B4B4;
+    margin-top: 0.5%;
+    font-size: 18px;
+    width: 30%;
+}
+
+.listagem .contato{
+    display: flex;
+    color: #B4B4B4;
+    margin-top: 0.5%;
+    font-size: 18px;
+    width: 15%;
+}
+
+.listagem .cidade{
+    display: flex;
+    color: #B4B4B4; 
+    margin-top: 0.5%;
+    font-size: 18px;
+    width: 19%;
+}
+
+.listagem .icones{
+    display: flex;
+    margin-top: 0%;
+    width: 13%;
 }
