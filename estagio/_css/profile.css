@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: red; 
+}
+
+.container{
+    display: flex;
+    flex-direction: column
+}
+
+.row{
+    background-color: #2C3E50;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-card{
+    background-color: white
+}

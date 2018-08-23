@@ -5,21 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cliente Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="_css/main.css" />
     <script src="main.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="nav-bar"> 
-        <div class="logo">
+    <div class="nav-bar row">
+        <div class="logo-col">
             <img src="_imagens/logo-zup-white.svg">
         </div>
-        <div class="search-field" align="center">
-                <input type="text">
+        <div class="search-col">
+            <div class="search-field">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar">
+            </div>
+        </div>
+        <div class="icon-col">
+            <i class="fas fa-user-circle fa-3x"></i>
         </div>
     </div>
     <div class="side-menu">
-    
+        <i class="fas fa-th-list"></i>
+        <h3>Todos</h3>
     </div>
-</body>
-</html>
+    <div class="clients-menu">
+        <div class="clients-box">
+            <section class="container">
+                <div class="item basis-auto">
+                    <img src="_imagens/irmao_jorel.jpg" alt="">
+                </div>
+                <div class="item basis-auto" id="name">Irmão do Jorel</div>
+                <div class="item basis-auto">email@email.com</div>
+                <div class="item basis-auto">(350)-350-3596</div>
+                <div class="item basis-auto">Uberlandia - MG</div>
+                <div class="item basis-auto">
+                    <i class="fas fa-trash icons"></i>
+                    <i class="fas fa-check icons"></i>
+                    <i class="fas fa-th-list icons"></i>
+                </div>
+            </section>
+        </div>
+        
+    </body>
+    </html>
