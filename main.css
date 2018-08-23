@@ -1,0 +1,107 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* ======== Top NavBar ========== */
+
+.container-navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 70px;
+    background-color: #2C3E50;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+.container-navbar .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 10%;
+    height: 100%;
+}
+
+.logo img{
+    margin-left: 10%;
+}
+
+.container-navbar .barradebusca{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 55%;
+    
+}
+
+.barradebusca{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.barradebusca textarea:focus, input:focus{
+    outline: none;
+}
+
+.txtBusca{
+    float:left;
+    padding-left:5px; 
+    font-size:18px;
+    border:none;
+    height:80%;
+    width:90%;
+  }
+
+.fa-search{
+    margin-left: 2%;
+    color: #B3C02B;
+}
+.container-navbar .icone{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 10%;
+    height: 100%;
+}
+
+.fa-user-alt{
+    color: #2C3E50;
+    background-color:white;
+    margin-top: 15%;
+    font-size: 35px;
+    border-radius: 50%;
+}
+
+/* ======== Lateral NavBar ========== */
+
+.container-conteudo{
+    display: flex;
+    background-color: #F9F9F9;
+    
+}
+
+.container-conteudo .lateral-navbar{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px);
+    width: 15%;
+    background-color: white;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+
+}
+
+
+.container-conteudo .listagem{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 70px; 
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: rgb(77, 155, 41);
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+}
