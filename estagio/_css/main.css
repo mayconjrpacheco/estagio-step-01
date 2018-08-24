@@ -4,6 +4,11 @@ body {
   background-color: #f9f9f9;
 }
 
+a:link { 
+  text-decoration:none; 
+  color: #2c3e50;
+}  
+
 /* navigation bar */
 
 .nav-bar {
@@ -132,7 +137,7 @@ input:focus {
   flex-direction: column;
   height: auto;
   position: relative;
-  padding: 50px 40px;
+  padding: 3px 30px;
 }
 
 /* clients item */
@@ -159,9 +164,6 @@ input:focus {
   color: #ababab;
 }
 
-.item .basis-auto{
-
-}
 
 .basis-auto {
   flex: 1 1 auto;
@@ -205,6 +207,21 @@ input:focus {
 .clients-box .container #name {
   color: #2c3e50;
   font-weight: bold;
+  text-transform: capitalize;
+}
+
+.clients-box .container #local{
+  text-transform: capitalize;
+}
+
+ul{
+  list-style: none;
+}
+
+.ic{
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-around;
 }
 
 /*media*/

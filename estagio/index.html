@@ -7,14 +7,14 @@
     <title>Cliente Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="_css/main.css" />
-    <script src="main.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="nav-bar row">
-        <div class="logo-col">
+        <div class="logo-col" id="logo">
             <img src="_imagens/logo-zup-white.svg">
         </div>
         <div class="search-col">
@@ -23,7 +23,7 @@
                 <input type="text" placeholder="Buscar">
             </div>
         </div>
-        <div class="icon-col">
+        <div class="icon-col" onclick="requireUsers()">
             <i id="btn-small" class="fas fa-th-list"></i>
             <i id="icon1" class="fas fa-user-circle fa-3x"></i>
         </div>
@@ -32,24 +32,11 @@
         <i class="fas fa-th-list"></i>
         <h3>Todos</h3>
     </div>
-    <div class="clients-menu">
-        <div class="clients-box">
-            <section class="container">
-                <div class="item basis-auto">
-                        <img src="_imagens/img_191958.png" alt="">
-                </div>
-                <div class="item basis-auto" id="name">Nome Do Cliente</div>
-                <div class="item basis-auto">email@email.com</div>
-                <div class="item basis-auto">(350)-350-3596</div>
-                <div class="item basis-auto">Uberlandia - MG</div>
-                <div class="item basis-auto" style="display: flex; display: flex; flex-direction: row; justify-content: space-around;">
-                    <i class="fas fa-trash icons"></i>
-                    <i class="fas fa-check icons"></i>
-                    <i class="fas fa-th-list icons"></i>
-                </div>
-            </section>
-        </div>
+        <div id="clients-list">
 
+        </div>
+    </div>
+    <script src="./_js/main.js"></script>
 </body>
 
 </html>
