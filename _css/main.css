@@ -42,6 +42,10 @@ body{
     margin-right: 15%;
 }
 
+.txtBusca{
+    margin-left: 1%;
+}
+
 .barradebusca textarea:focus, input:focus{
     outline: none;
 }
