@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+a:link { 
+text-decoration:none; 
+} 
+
 .background {
   background: rgb(244, 244, 244);
   background: linear-gradient(
@@ -13,10 +17,10 @@ body {
   );
   height: 100vh;
   height: 100vh;
-  padding: 60px 300px;
 }
 
 .profile-card {
+  margin: 3% 25%;
   min-width: 600px;
   display: flex;
   height: 80vh;
@@ -56,7 +60,7 @@ body {
 }
 
 .profile-card .profile-icons {
-  margin-top: 3%;
+  margin-top: 5%;
   width: 350px;
   height: 60px;
   display: flex;
@@ -64,7 +68,7 @@ body {
   justify-content: space-around;
 }
 
-.svg-inline--fa {
+.svg-inline--fa:not(#btn) {
   display: inline-block;
   font-size: 200%;
   height: 1em;
@@ -74,6 +78,49 @@ body {
   margin: 0px 30px;
 }
 
-.svg-inline--fa:hover {
+.svg-inline--fa:hover:not(#btn) {
   color: #9ac321;
+}
+
+.profile-card h1{
+  margin: 0;
+}
+
+#btn{
+  font-size: 40px;
+  color: white;
+  margin: 2% 0 0 2%
+}
+
+/* media queries */
+
+@media screen and (max-width: 600px) {
+  .profile-card{
+    min-width: 300px;
+    margin: 0;
+  }
+  .background{
+    width: 100%
+  }
+  .profile-card .profile-icons {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 1.5em;
+  }
+  #btn{
+    margin-bottom: 2%;
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px)  {
+  .background{
+    padding: 1% 2%
+  }
+  .profile-card{
+    margin: 0;
+  }
+  #btn{
+    margin-bottom: 2%;
+  }
 }
