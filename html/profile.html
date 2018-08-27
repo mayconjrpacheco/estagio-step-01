@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="UFT-8"/>
-        <link rel="stylesheet" href="../_css/profile.css">
-        <title>Front End</title>
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container">
-            <img src="../img/yasuo-high-noon.png">
-            <p> Hi, My name is</p>
-            <p> name here</p>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cliente Manager | Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../_css/profile.css" />
+</head>
+
+<body>
+    <div class="background">
+        <a href="main.html">
+            <i class="fas fa-chevron-circle-left" id="btn"></i>
+        </a>
+        <div class="profile-card" id="card">
+            <div class="border" id="borda">
+                <div class="picture" id="picture-circle">
+
+                </div>
+            </div>
+            <div id="info">
+
+            </div>
+            <div class="profile-icons">
+                <i class="far fa-user" onmouseover="changeInfo('name')"></i>
+                <i class="far fa-envelope" onmouseover="changeInfo('email')"></i>
+                <i class="far fa-calendar-alt" onmouseover="changeInfo('birth')"></i>
+                <i class="fas fa-map-marked-alt" onmouseover="changeInfo('adress')"></i>
+                <i class="fas fa-phone" onmouseover="changeInfo('phone')"></i>
+                <i class="fas fa-key" onmouseover="changeInfo('password')"></i>
+            </div>
         </div>
-    </body>
+    </div>
+    <script src="../js/profile.js"></script>
+</body>
+
 </html>

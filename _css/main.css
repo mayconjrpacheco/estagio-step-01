@@ -86,6 +86,7 @@ body{
 
 .container-conteudo{
     display: flex;
+    flex-direction: row;
     background-color:#F9F9F9;
     
 }
@@ -107,27 +108,33 @@ body{
     font-size: 20px;
 }
 
+.container-listagem{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4%;
+}
 
 .listagem{
     display: flex;
     flex-direction: row;
     align-content: flex-start;
-    width: 85%;
-    height: 70px; 
+    width: 90%;
     border-radius: 5px;
-    margin-top: 4%;
     margin-left: 4%;
     margin-right: 4%;
     border-style: solid;
     border-width: 1px;
     border-color: #E0E0E0;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    background-color: #FFFFFF;
 }
 
 .listagem img{
-    margin-top: 15%;
+    margin-top: 10%;
     margin-left: 20%;
     border-radius: 50%;
+    width: 40px;
+    height:40px;
 }
 
 .listagem a{
