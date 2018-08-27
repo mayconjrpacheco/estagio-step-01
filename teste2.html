@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="clients-menu" id="clients"></div>
+    <script>
+
+        var div2 = document.createElement('div')
+        div2.className = 'clients-box'
+        var div3 = document.createElement('div')
+        div3.className = 'container'
+        var div4 = document.createElement('div')
+        div4.className = 'item basis-auto'
+        var img = document.createElement('img')
+        img.src = 'estagio/_imagens/irmao_jorel.jpg'
+        var div5 = document.createElement('div')
+        div5.className = 'item basis-auto'
+        div5.id = 'name'
+        var link = document.createElement('a')
+        link.href = 'estagio/profile.html'
+        link.textContent = 'teste'
+        var divEmail = document.createElement('div')
+        divEmail.className = 'item basis-auto'
+        divEmail.textContent = 'email'
+        var divPhone = document.createElement('div')
+        divPhone.className = 'item basis-auto'
+        divPhone.textContent = 'telefone'
+        var divLocal = document.createElement('div')
+        divLocal.className = 'item basis-auto'
+        divLocal.textContent = 'local'
+        var divIcons = document.createElement('div')
+        divIcons.className = 'item basis-auto ic'
+
+
+
+
+
+
+
+        div2.appendChild(div3).appendChild(div4).appendChild(img);
+        div3.appendChild(div5).appendChild(link)
+        div3.appendChild(divEmail)
+        div3.appendChild(divPhone)
+        div3.appendChild(divLocal)
+        div3.appendChild(divIcons)
+
+        document.getElementById('clients').appendChild(div2)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
