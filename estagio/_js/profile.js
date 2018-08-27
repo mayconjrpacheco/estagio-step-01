@@ -1,44 +1,56 @@
-getUserData();
+var profile = localStorage.getItem("users");
+var query = location.search.slice(4);
+var data = ([] = JSON.parse(profile));
+console.log(data[query]);
 
+var title = [
+  "Hi, My name is",
+  "My email adress is",
+  "My birthday is",
+  "My adress is",
+  "My phone number is",
+  "My password is"
+];
 
-function getUserData() {
-    
-    $.ajax({
-        url: 'https://randomuser.me/api/?nat=br&seed=olvani',
-        dataType: 'json',
-        success: function(data) {
-            renderUserList(data.results);
-        }
-    });
-    
-}
+var card = document.createElement("img");
+var h3 = document.createElement("h3");
+var t = document.createTextNode(title[0]);
+var t2 = document.createTextNode(data[query].name.first);
+var h1 = document.createElement("h1");
+h3.appendChild(t);
+h1.appendChild(t2);
 
-function renderUserListItem(listUserData) {
-    console.log(listUserData);
-}
+card.src = data[query].picture.large;
+document.getElementById("picture-circle").appendChild(card);
+document.getElementById("info").appendChild(h3);
+document.getElementById("info").appendChild(h1);
 
-function renderUserList(listUserData) {
-    
-    renderUserListItem(listUserData);
-    $('<ul>', {
-        id: 'list'
-    }).appendTo('#clients-list');
-    var templateItem = '';
-    for (var i = 0; i < listUserData.length; i++) {
-        
-        templateItem += '<div class="clients-menu">';
-        templateItem += '<div class="clients-box">';
-        templateItem += '<div class="container">';
-        templateItem += '<div class="item basis-auto"><img src='+ listUserData[i].picture.thumbnail+'></div>';
-        templateItem += '<div class="item basis-auto" id="name"><a href="profile.html">'+ listUserData[i].name.first +'</a></div>';
-        templateItem += '<div class="item basis-auto">'+ listUserData[i].email +'</div>';
-        templateItem += '<div class="item basis-auto">'+ listUserData[i].phone +'</div>';
-        templateItem += '<div class="item basis-auto" id="local">'+ listUserData[i].location.city +' - '+ listUserData[i].location.state + '</div>';
-        templateItem += '<div class="item basis-auto ic">'
-        templateItem += '<i class="fas fa-trash icons"></i>'
-        templateItem += '<i class="fas fa-check icons"></i>'
-        templateItem += '<i class="fas fa-th-list icons"></i>'
-        templateItem += '</div></div></div></div>';
-        $("<li>" + templateItem + "</li>").appendTo('#list');
-    }
+function changeInfo(dataUser) {
+  switch (dataUser) {
+    case "name":
+      t.nodeValue = title[0];
+      t2.nodeValue = data[query].name.first;
+      break;
+    case "email":
+      t.nodeValue = title[1];
+      t2.nodeValue = data[query].email;
+      break;
+    case "birth":
+      t.nodeValue = title[2];
+      t2.nodeValue = data[query].date;
+      break;
+    case "adress":
+      t.nodeValue = title[3];
+      t2.nodeValue = data[query].location.street;
+      break;
+    case "phone":
+      t.nodeValue = title[4];
+      t2.nodeValue = data[query].phone;
+      break;
+
+    case "password":
+      t.nodeValue = title[5];
+      t2.nodeValue = data[query].login.password;
+      break;
+  }
 }

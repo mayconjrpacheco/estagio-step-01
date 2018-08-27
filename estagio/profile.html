@@ -7,30 +7,32 @@
     <title>Cliente Manager | Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="_css/profile.css" />
 </head>
+
 <body>
     <div class="background">
         <a href="index.html">
             <i class="fas fa-chevron-circle-left" id="btn"></i>
-        </a> 
+        </a>
         <div class="profile-card" id="card">
-            <div class="border">
-                <div class="picture">
-                    <img src="_imagens/img_191958.png" alt="">
+            <div class="border" id="borda">
+                <div class="picture" id="picture-circle">
+
                 </div>
             </div>
-            <h3>Hi, My name is</h3>
-            <h1>Cliente</h1>
+            <div id="info">
+
+            </div>
             <div class="profile-icons">
-                <i class="far fa-user"></i>
-                <i class="far fa-envelope"></i>
-                <i class="far fa-calendar-alt"></i>
-                <i class="fas fa-map-marked-alt"></i>
-                <i class="fas fa-phone"></i>
-                <i class="fas fa-key"></i>
+                <i class="far fa-user" onmouseover="changeInfo('name')"></i>
+                <i class="far fa-envelope" onmouseover="changeInfo('email')"></i>
+                <i class="far fa-calendar-alt" onmouseover="changeInfo('birth')"></i>
+                <i class="fas fa-map-marked-alt" onmouseover="changeInfo('adress')"></i>
+                <i class="fas fa-phone" onmouseover="changeInfo('phone')"></i>
+                <i class="fas fa-key" onmouseover="changeInfo('password')"></i>
             </div>
         </div>
     </div>
