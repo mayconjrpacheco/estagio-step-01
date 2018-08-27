@@ -1,69 +1,74 @@
-var dataUsers = localStorage.getItem("users");
-var names = [];
+var usersNumber = localStorage.getItem("number");
+var count = 5;
+var listDb = [];
+var isSet = true
+var filtered = [];
 
-if (!dataUsers) {
-  getUserData();
-} else {
-  dataUsersJson = [] = JSON.parse(dataUsers);
-  renderUserList(dataUsersJson);
+
+if(!usersNumber){
+  setUsersNumber(count)
+  getUserData(count);
+}else{
+  var url = location.search.slice(4);
+  if(url = null){
+    setUsersNumber(url)
+  }
+  var n = getUsersNumber()
+  getUserData(n)
 }
 
-function getUserData() {
+function getUserData(count) {
   $.ajax({
-    url: "https://randomuser.me/api/?results=25&nat=br&format=json",
+    url: "https://randomuser.me/api/?results=" + count + "&nat=br&format=json",
     dataType: "json",
     success: function(data) {
-      //armazenando localstorage
-      localStorage.setItem("users", JSON.stringify(data.results));
-      var objetoSalvo = localStorage.getItem("users");
-      var usersJson = JSON.parse(objetoSalvo);
-      renderUserList(usersJson);
+      listDb = data.results
+      renderUserList(listDb);
+      listernerSearchInput();
     }
   });
 }
 
+
 function renderUserList(listUserData) {
-  var i2 = 0;
-  lista = [] = listUserData;
-  console.log("objeto recebido:", lista);
+  var id3 = 0;
+  var id2 = 0;
   var template = "<ul id='list'>";
-  template += "<li>";
-  for (let i = 0; i < lista.length; i++) {
-    i2++;
-    lista[i].id.value = i
-    template += '<div class="clients-menu">';
-    template += '<div class="clients-box">';
-    template += '<div class="container">';
-    template +=
+  template += "<li id='lista'>";
+  if(isSet){
+    for (let i = 0; i < listUserData.length; i++) {
+      id2++;
+      id3++
+      listUserData[i].id.value = i
+      template += '<div class="clients-menu" id="'+ id2 + '">';
+      template += '<div class="clients-box">';
+      template += '<div class="container">';
+      template +=
       '<div class="item basis-auto"><img src="' +
-      lista[i].picture.thumbnail +
+      listUserData[i].picture.thumbnail +
       '">';
-    template +=
-      '<div class="item basis-auto" id="name"><a href="profile.html? ' +
-      i +
-      ' ">' +
-      lista[i].name.first +
+      template +=
+      '<div class="item basis-auto" id="name"><a href="profile.html? '+ count +' ">' +
+      listUserData[i].name.first +
       "</a>";
-    template += "<div class='item basis-auto'>" + lista[i].email;
-    template += "<div class='item basis-auto'>" + lista[i].phone;
-    template +=
+      template += "<div class='item basis-auto'>" + listUserData[i].email;
+      template += "<div class='item basis-auto'>" + listUserData[i].phone;
+      template +=
       "<div class='item basis-auto' id='local'>" +
-      lista[i].location.city +
+      listUserData[i].location.city +
       " - " +
-      lista[i].location.state;
-    template += "<div class='item basis-auto ic'>";
-    template +=
+      listUserData[i].location.state;
+      template += "<div class='item basis-auto ic'>";
+      template +=
       "<i class='fas fa-trash icons' onclick='deleteUser(" +
-      lista[i].id.value +
-      ")'></i><i class='fas fa-check icons' id='" +
-      i2 +
-      "' onclick='checkUser(" +
-      i2 +
-      ")'></i><a href='profile.html? " +
+      id2 +
+      ")'></i><i class='fas fa-check icons' id='iconCheck" + id3 +
+      "' onclick='checkUser(" + id3 +")'></i><a style='a:visited{color: inherit}' href='profile.html? " +
       i +
       " '><i class='fas fa-th-list icons'></i></a>";
-    template += "</div>";
-    template += "</div></div></div></div></div></div></div></div>";
+      template += "</div>";
+      template += "</div></div></div></div></div></div></div></div>";
+    }
   }
   template += "</li>";
   template += "</ul>";
@@ -71,58 +76,49 @@ function renderUserList(listUserData) {
 }
 
 function deleteUser(id) {
-  console.log(id)
   //logica deletar json
-  var refreshedList = JSON.parse(localStorage.getItem("users"));
-  console.log('recuperado para deletar',refreshedList)
-  if(refreshedList.id.value.match(id)){
-    console.log('ok');
-  }
- 
-  /*var dataUsersJson = ([] = JSON.parse(dataUsers));
-  console.log(dataUsersJson);
-  delete dataUsersJson[id];
-  localStorage.setItem("users", JSON.stringify(dataUsersJson));
-  renderUserList(dataUsersJson);*/
+  document.getElementById(id).remove();
+  count--;
+  isSet = false
+  setUsersNumber(count)
+  getUserData(url--)
 }
 
 function checkUser(id) {
-  var x = document.getElementById(id);
+  console.log('id do icone', id)
+  var x = document.getElementById("iconCheck"+ id);
   x.style.color = "#9ac321";
 }
 
-function findUser() {
-  var usersListcheck = JSON.parse(dataUsers);
-  var name = document.getElementById("searchBar").value;
-  if (name != "") {
-    returnUsers(name, usersListcheck);
-  }
+function listernerSearchInput() {
+  var searchInput = document.getElementById('searchBar');
+  searchInput.addEventListener('keyup', function(keydown) {
+    filtered = listDb.filter(function(res) {
+      console.log(keydown.target.value);
+      return res.name.first.match(keydown.target.value);
+    });
+
+    console.log(filtered);
+
+    setTimeout(function(){
+      clearList
+      renderUserList(filtered)
+    },2000)
+    
+  });
 }
 
-function returnUsers(name, usersListcheck) {
-  for (var i = 0; i < usersListcheck.length; i++) {
-    if (usersListcheck[i].name.first.match(name)) {
-      names[i] = usersListcheck[i];
-    }
-  }
-  names = cleanList(names);
-  names.sort((a, b) => a - b);
-  setTimeout(() => {
-    localStorage.setItem("usersFilter", JSON.stringify(names));
-    resetList();
-    var y = localStorage.getItem("usersFilter");
-    renderUserList(JSON.parse(y));
-  }, 500);
+console.log('usuario filtrado' ,filtered)
+
+function setUsersNumber(n){
+  localStorage.setItem('number', n)
 }
 
-function resetList() {
-  document.getElementById("list").outerHTML = "";
+function getUsersNumber(){
+  localStorage.getItem('number')
+  return usersNumber
 }
 
-function cleanList(data) {
-  return data.filter(n => n);
-}
-
-function setList(list){
-  localStorage.setItem("users")
+function clearList(){
+  document.getElementById('lista').remove()
 }

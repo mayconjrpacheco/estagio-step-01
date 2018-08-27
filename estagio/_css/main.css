@@ -6,8 +6,12 @@ body {
 
 a:link {
   text-decoration: none;
-  color: #2c3e50;
 }
+
+a:visited{
+  color: inherit
+}
+
 
 /* navigation bar */
 
@@ -129,6 +133,11 @@ input:focus {
   flex-basis: auto;
   margin-top: 1%;
   font-size: 130%;
+}
+
+#gif{
+  width: 30px;
+  height: 30px;
 }
 
 .clients-menu {
