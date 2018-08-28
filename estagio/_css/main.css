@@ -220,21 +220,26 @@ input:focus {
   color: #2c3e50;
   font-weight: bold;
   text-transform: capitalize;
-  margin-left: 2%;
+  margin: 0 5% 0 2%;
 }
 
 .clients-box .container #local {
   text-transform: capitalize;
+  width: 20vw;
 }
 
-.container .mail{
+.container .mail {
   text-transform: lowercase;
+  width: 20vw;
   font-weight: 800;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .container .phone{
-  font-weight: 900
+  font-weight: 900;
+  margin: 0 5%;
+  width: 20%;
+
 }
 
 ul {
@@ -242,11 +247,15 @@ ul {
 }
 
 .ic {
+  width: 10vw;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding-left: 5%;
 }
 
 /*media*/
+
 
 @media screen and (max-width: 600px) {
   #icon1 {
@@ -259,7 +268,7 @@ ul {
     display: initial;
   }
   .clients-box {
-    width: 80vw;
+    width: 95vw;
     height: 300px;
   }
   .container {
@@ -279,9 +288,9 @@ ul {
   }
   .ic{
     display: flow-root;
-    width: 100%;
+    width: 80vw;
     padding: 0 5%;
-    font-size: 30px;
+    font-size: 2em;
   }
   ul{
     padding: 0;
@@ -291,13 +300,34 @@ ul {
   }
 }
 
-@media (max-width: 780px) {
+@media only screen and (max-width: 900px) {
+  .img .phone{
+    margin-left: 8%;
+    width: 200px;
+    margin-left: 30%;
+  }
+  #name{
+    width: none; 
+  }
+  .container .mail{
+    width: 60vw
+  }
+  .img{
+    width: 100%
+  }
 }
 
 @media (min-width: 992px) {
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1225px) {
+  .side-menu{
+    width: 10%
+  }
+  .phone{
+    margin-left: 8%;
+    width: 10vw
+  }
 }
 
 

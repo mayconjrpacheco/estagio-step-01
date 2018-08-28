@@ -18,6 +18,8 @@ getProfile();
 
 
 
+
+
 function getProfile() { 
   $.ajax({
     url: "https://randomuser.me/api/?nat=br&format=json",
@@ -30,11 +32,13 @@ function getProfile() {
 }
 
 function renderUserProfile(profileData){
+
   card = document.createElement("img");
   h3 = document.createElement("h3");
   t = document.createTextNode(title[0]);
   t2 = document.createTextNode(profileData[0].name.first);
   h1 = document.createElement("h1");
+  h1.id = 'email';
   h3.appendChild(t);
   h1.appendChild(t2);
   

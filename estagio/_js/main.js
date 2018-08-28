@@ -50,17 +50,17 @@ function renderUserList(listUserData) {
       listUserData[i].picture.thumbnail +
       '">';
       template +=
-      '<div class="item basis-auto name" id="name"><a href="profile.html? '+ count +' ">' +
+      '<div class="item name" id="name"><a href="profile.html? '+ count +' ">' +
       listUserData[i].name.first +
       "</a>";
-      template += "</div><div class='item basis-auto mail'>" + listUserData[i].email;
-      template += "</div><div class='item basis-auto phone'>" + listUserData[i].phone;
+      template += "</div><div class='item  mail'>" + listUserData[i].email;
+      template += "</div><div class='item  phone'>" + listUserData[i].phone;
       template +=
-      "</div><div class='item basis-auto local' id='local'><span>" +
+      "</div><div class='item local' id='local'><span>" +
       listUserData[i].location.city +
       " - " +
       listUserData[i].location.state;
-      template += "</span></div><div class='item basis-auto ic'>";
+      template += "</span></div><div class='ic'>";
       template +=
       "<i class='fas fa-trash icons' onclick='deleteUser(" +
       id2 +

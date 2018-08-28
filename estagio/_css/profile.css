@@ -128,3 +128,10 @@ a:visited{
     margin-bottom: 2%;
   }
 }
+
+#info,
+h1,
+h3{
+  text-align: center
+}
+
