@@ -3,6 +3,7 @@ var count = 7;
 var listDb = [];
 var isSet = true
 var filtered = [];
+var emailFiltered = [];
 
 
 if(!usersNumber){
@@ -35,6 +36,7 @@ function renderUserList(listUserData) {
   var id2 = 0;
   var template = "<ul id='ul'>";
   template += "<li id='li'>";
+
   if(isSet){
     for (let i = 0; i < listUserData.length; i++) {
       id2++;
@@ -123,3 +125,4 @@ function loading(idGif, idImg){
   document.getElementById(idGif).appendChild(gif)
   document.getElementById(idImg).style.opacity = '0.2'
 }
+

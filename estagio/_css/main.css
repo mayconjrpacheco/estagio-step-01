@@ -246,7 +246,7 @@ ul {
   flex-direction: row;
 }
 
-/*media
+/*media*/
 
 @media screen and (max-width: 600px) {
   #icon1 {
@@ -271,82 +271,33 @@ ul {
     width: 80px;
     height: 80px;
   }
-  .item .basis-auto {
-    width: 50%;
-    flex-direction: column;
+  .basis-auto {
+       width: 50%;
+      flex: 1 1 auto;
+      flex-direction: column;
+      margin-top: 2%;
+  }
+  .ic{
+    display: flow-root;
+    width: 100%;
+    padding: 0 5%;
+    font-size: 30px;
+  }
+  ul{
+    padding: 0;
+  }
+  .clients-menu{
+    flex-direction: inherit
   }
 }
-*/
 
 @media (max-width: 780px) {
-  .nav-bar{
-    background-color: red;
-  }
 }
 
 @media (min-width: 992px) {
-  .nav-bar{
-    background-color: green;
-  }
 }
 
 @media (min-width: 1200px) {
-  .nav-bar{
-    background-color: yellow;
-  }
 }
 
-@media (min-width: 37em) { 
-  .nav-bar{
-    background-color: blue;
-  }
-  #icon1 {
-    display: none;
-  }
-  .side-menu {
-    display: none;
-  }
-  #btn-small {
-    display: initial;
-  }
-  ul{
-    padding-left: 0
-  }
-  .clients-menu{
-    padding: 3px 10px;
-  }
-  .clients-box{
-    height: 20vh;
-  }
-  .ic{
-    flex-direction: column ;
-  }
-  
-  
-}
-.container #local span{
-  font-size: 15px
-}
-.container .mail{
-  word-break: break-all;
-  margin: 0 2%;
-}
 
- /* 592px */
-@media (min-width: 41em) and (max-width: 50em) { 
-  .nav-bar{
-    background-color: darkkhaki;
-  }
-  .container #local span{
-    font-size: 15px
-  }
-  .container .mail{
-    word-break: break-all;
-    margin: 0 2%;
-  }
-} 
-@media (min-width: 47em) and (max-width: 100em) { 
-  .nav-bar{
-    background-color: gray;
-  }
-} 
