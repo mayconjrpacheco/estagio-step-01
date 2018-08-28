@@ -1,5 +1,5 @@
 var usersNumber = localStorage.getItem("number");
-var count = 5;
+var count = 7;
 var listDb = [];
 var isSet = true
 var filtered = [];
@@ -33,8 +33,8 @@ function getUserData(count) {
 function renderUserList(listUserData) {
   var id3 = 0;
   var id2 = 0;
-  var template = "<ul id='list'>";
-  template += "<li id='lista'>";
+  var template = "<ul id='ul'>";
+  template += "<li id='li'>";
   if(isSet){
     for (let i = 0; i < listUserData.length; i++) {
       id2++;
@@ -44,21 +44,21 @@ function renderUserList(listUserData) {
       template += '<div class="clients-box">';
       template += '<div class="container">';
       template +=
-      '<div class="item basis-auto"><img src="' +
+      '<div class="item basis-auto img" id="' + (id2+3) + '"><img id="' + (id2+5) + '" src="' +
       listUserData[i].picture.thumbnail +
       '">';
       template +=
-      '<div class="item basis-auto" id="name"><a href="profile.html? '+ count +' ">' +
+      '<div class="item basis-auto name" id="name"><a href="profile.html? '+ count +' ">' +
       listUserData[i].name.first +
       "</a>";
-      template += "<div class='item basis-auto'>" + listUserData[i].email;
-      template += "<div class='item basis-auto'>" + listUserData[i].phone;
+      template += "</div><div class='item basis-auto mail'>" + listUserData[i].email;
+      template += "</div><div class='item basis-auto phone'>" + listUserData[i].phone;
       template +=
-      "<div class='item basis-auto' id='local'>" +
+      "</div><div class='item basis-auto local' id='local'><span>" +
       listUserData[i].location.city +
       " - " +
       listUserData[i].location.state;
-      template += "<div class='item basis-auto ic'>";
+      template += "</span></div><div class='item basis-auto ic'>";
       template +=
       "<i class='fas fa-trash icons' onclick='deleteUser(" +
       id2 +
@@ -66,18 +66,21 @@ function renderUserList(listUserData) {
       "' onclick='checkUser(" + id3 +")'></i><a style='a:visited{color: inherit}' href='profile.html? " +
       i +
       " '><i class='fas fa-th-list icons'></i></a>";
-      template += "</div>";
+      template += "</div></div>";
       template += "</div></div></div></div></div></div></div></div>";
     }
   }
   template += "</li>";
   template += "</ul>";
-  document.body.innerHTML += template;
+  var x = document.createRange().createContextualFragment(template)
+  document.getElementById('ul-wrapper').appendChild(x)
 }
 
 function deleteUser(id) {
-  //logica deletar json
-  document.getElementById(id).remove();
+  loading(id+3,id+5)
+  setTimeout(function(){
+    document.getElementById(id).remove();
+  },1300)
   count--;
   isSet = false
   setUsersNumber(count)
@@ -85,7 +88,6 @@ function deleteUser(id) {
 }
 
 function checkUser(id) {
-  console.log('id do icone', id)
   var x = document.getElementById("iconCheck"+ id);
   x.style.color = "#9ac321";
 }
@@ -94,21 +96,12 @@ function listernerSearchInput() {
   var searchInput = document.getElementById('searchBar');
   searchInput.addEventListener('keyup', function(keydown) {
     filtered = listDb.filter(function(res) {
-      console.log(keydown.target.value);
       return res.name.first.match(keydown.target.value);
     });
-
-    console.log(filtered);
-
-    setTimeout(function(){
-      clearList
-      renderUserList(filtered)
-    },2000)
-    
+    clearList()
+    renderUserList(filtered)
   });
 }
-
-console.log('usuario filtrado' ,filtered)
 
 function setUsersNumber(n){
   localStorage.setItem('number', n)
@@ -120,5 +113,13 @@ function getUsersNumber(){
 }
 
 function clearList(){
-  document.getElementById('lista').remove()
+  document.getElementById('li').remove()
+}
+
+function loading(idGif, idImg){
+  var gif = document.createElement('img')
+  gif.src = '../_imagens/gif-loader.gif'
+  gif.id = 'gif'
+  document.getElementById(idGif).appendChild(gif)
+  document.getElementById(idImg).style.opacity = '0.2'
 }

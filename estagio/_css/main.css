@@ -6,6 +6,7 @@ body {
 
 a:link {
   text-decoration: none;
+  color: inherit
 }
 
 a:visited{
@@ -23,7 +24,7 @@ a:visited{
   flex-direction: row;
   z-index: 999;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
-    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
 .nav-bar .logo-col {
@@ -113,7 +114,7 @@ input:focus {
   justify-content: space-around;
   padding: 20px 0 0 0;
   box-shadow: -7px 20px 38px 3px rgba(0, 0, 0, 0.14),
-    -12px 8px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 10px -7px rgba(0, 0, 0, 0.2);
+  -12px 8px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 10px -7px rgba(0, 0, 0, 0.2);
 }
 
 .side-menu .fa-th-list {
@@ -136,8 +137,7 @@ input:focus {
 }
 
 #gif{
-  width: 30px;
-  height: 30px;
+  position: absolute
 }
 
 .clients-menu {
@@ -158,14 +158,13 @@ input:focus {
   border-top-right-radius: 5px;
   width: 100%;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-    8px 12px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  8px 12px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   height: 10vh;
   display: flex;
   flex-direction: row;
 }
 
 .item {
-  margin: 5px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -200,7 +199,6 @@ input:focus {
   margin: 0 auto;
   display: flex;
   border: 1px solid #ccc;
-  padding: 1%;
 }
 
 .item img {
@@ -211,6 +209,7 @@ input:focus {
   height: 48px;
   border: 50%;
   border-radius: 100%;
+  margin-left: 1%;
 }
 
 .icons {
@@ -221,10 +220,21 @@ input:focus {
   color: #2c3e50;
   font-weight: bold;
   text-transform: capitalize;
+  margin-left: 2%;
 }
 
 .clients-box .container #local {
   text-transform: capitalize;
+}
+
+.container .mail{
+  text-transform: lowercase;
+  font-weight: 800;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container .phone{
+  font-weight: 900
 }
 
 ul {
@@ -234,10 +244,9 @@ ul {
 .ic {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 
-/*media*/
+/*media
 
 @media screen and (max-width: 600px) {
   #icon1 {
@@ -264,14 +273,80 @@ ul {
   }
   .item .basis-auto {
     width: 50%;
+    flex-direction: column;
+  }
+}
+*/
+
+@media (max-width: 780px) {
+  .nav-bar{
+    background-color: red;
   }
 }
 
-@media (max-width: 780px) {
-}
-
 @media (min-width: 992px) {
+  .nav-bar{
+    background-color: green;
+  }
 }
 
 @media (min-width: 1200px) {
+  .nav-bar{
+    background-color: yellow;
+  }
 }
+
+@media (min-width: 37em) { 
+  .nav-bar{
+    background-color: blue;
+  }
+  #icon1 {
+    display: none;
+  }
+  .side-menu {
+    display: none;
+  }
+  #btn-small {
+    display: initial;
+  }
+  ul{
+    padding-left: 0
+  }
+  .clients-menu{
+    padding: 3px 10px;
+  }
+  .clients-box{
+    height: 20vh;
+  }
+  .ic{
+    flex-direction: column ;
+  }
+  
+  
+}
+.container #local span{
+  font-size: 15px
+}
+.container .mail{
+  word-break: break-all;
+  margin: 0 2%;
+}
+
+ /* 592px */
+@media (min-width: 41em) and (max-width: 50em) { 
+  .nav-bar{
+    background-color: darkkhaki;
+  }
+  .container #local span{
+    font-size: 15px
+  }
+  .container .mail{
+    word-break: break-all;
+    margin: 0 2%;
+  }
+} 
+@media (min-width: 47em) and (max-width: 100em) { 
+  .nav-bar{
+    background-color: gray;
+  }
+} 
