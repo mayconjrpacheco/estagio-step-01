@@ -96,39 +96,6 @@ a:visited{
   margin: 2% 0 0 2%
 }
 
-/* media queries */
-
-@media screen and (max-width: 600px) {
-  .profile-card{
-    min-width: 300px;
-    margin: 0;
-  }
-  .background{
-    width: 100%
-  }
-  .profile-card .profile-icons {
-    margin-top: 10%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 1.5em;
-  }
-  #btn{
-    margin-bottom: 2%;
-  }
-}
-
-@media only screen and (min-width : 768px) and (max-width : 1024px)  {
-  .background{
-    padding: 1% 2%
-  }
-  .profile-card{
-    margin: 0;
-  }
-  #btn{
-    margin-bottom: 2%;
-  }
-}
-
 #info,
 h1,
 h3{

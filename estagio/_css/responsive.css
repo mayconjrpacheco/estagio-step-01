@@ -1,0 +1,105 @@
+@media screen and (max-width: 600px) {
+    #icon1 {
+      display: none;
+    }
+    .side-menu {
+      display: none;
+    }
+    #btn-small {
+      display: initial;
+    }
+    .clients-box {
+      width: 95vw;
+      height: 300px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .item img {
+      width: 80px;
+      height: 80px;
+    }
+    .basis-auto {
+      width: 50%;
+      flex: 1 1 auto;
+      flex-direction: column;
+      margin-top: 2%;
+    }
+    .ic {
+      display: flow-root;
+      width: 80vw;
+      padding: 0 5%;
+      font-size: 2em;
+    }
+    ul {
+      padding: 0;
+    }
+    .clients-menu {
+      flex-direction: inherit;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .img .phone {
+      margin-left: 8%;
+      width: 200px;
+      margin-left: 30%;
+    }
+    #name {
+      width: none;
+    }
+    .container .mail {
+      width: 60vw;
+    }
+    .img {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 992px) {
+  }
+  
+  @media (max-width: 1225px) {
+    .side-menu {
+      width: 10%;
+    }
+    .phone {
+      margin-left: 8%;
+      width: 10vw;
+    }
+  }
+
+  /* media queries */
+
+@media screen and (max-width: 600px) {
+  .profile-card{
+    min-width: 300px;
+    margin: 0;
+  }
+  .background{
+    width: 100%
+  }
+  .profile-card .profile-icons {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 1.5em;
+  }
+  #btn{
+    margin-bottom: 2%;
+  }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px)  {
+  .background{
+    padding: 1% 2%
+  }
+  .profile-card{
+    margin: 0;
+  }
+  #btn{
+    margin-bottom: 2%;
+  }
+}
