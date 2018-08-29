@@ -84,6 +84,11 @@
     width: auto;
     margin-top: 8%;
   }
+  .side-menu table th, td{
+    font-size: 1.5em;
+    padding: 8%;
+    cursor: pointer
+  }
 }
 
 
@@ -111,7 +116,6 @@
 }
 
 @media (min-width: 800px) and (max-width: 1225px) {
-  
   .side-menu {
     width: 15%;
   }
@@ -124,8 +128,93 @@
     padding: 5%;
     cursor: pointer
   }
+  .clients-box{
+    height: 15vh;
+  }
+  .ic{
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+  .container .mail {
+    word-break: break-all;
+  }
 }
 
+@media (min-width: 1800px){
+  .nav-bar{
+    height: 130px;
+  }
+  .nav-bar .logo-col img {
+    height: auto;
+    width: auto
+  }
+  .nav-bar .search-field {
+    width: 110%;
+    height: 40px;
+  }
+  .side-menu table th, td{
+    font-size: 2em;
+  }
+  
+  .nav-bar .logo-col img {
+    height: 90px;
+    width: auto;
+  }
+  
+  .fa-search{
+    font-size: 30px;
+  }
+  
+  .fa-user-circle{
+    font-size: 100px;
+  }
+  
+  .name,
+  .mail,
+  .phone,
+  .local,
+  .ic{
+    font-size: 150%
+  }
+}
+
+@media (min-width: 2300px){
+  .nav-bar{
+    height: 180px;
+  }
+  .nav-bar .logo-col img {
+    height: 130px;
+    width: auto
+  }
+  .nav-bar .search-field {
+    width: 110%;
+    height: 60px;
+  }
+  .side-menu table th, td{
+    font-size: 3em;
+  }
+  .item img {
+    width: 100px;
+    height: 90px;
+  }
+  
+  .fa-search{
+    font-size: 40px;
+  }
+  
+  .fa-user-circle{
+    font-size: 130px;
+  }
+  
+  .name,
+  .mail,
+  .phone,
+  .local,
+  .ic{
+    font-size: 230%
+  }
+}
 /*//////////////////// media queries profile //////////////////// */
 
 @media screen and (max-width: 600px) {
