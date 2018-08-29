@@ -1,35 +1,41 @@
 var usersNumber = localStorage.getItem("number");
 var count = 7;
 var listDb = [];
-var isSet = true
+var isSet = true;
 var filtered = [];
 var emailFiltered = [];
+var isChecked = false;
 
-
-if(!usersNumber){
-  setUsersNumber(count)
+if (!usersNumber) {
+  setUsersNumber(count);
   getUserData(count);
-}else{
+} else {
   var url = location.search.slice(4);
-  if(url = null){
-    setUsersNumber(url)
+  if ((url = null)) {
+    setUsersNumber(url);
   }
-  var n = getUsersNumber()
-  getUserData(n)
+  var n = getUsersNumber();
+  getUserData(n);
 }
 
 function getUserData(count) {
   $.ajax({
     url: "https://randomuser.me/api/?results=" + count + "&nat=br&format=json",
-    dataType: "json",
-    success: function(data) {
-      listDb = data.results
+    dataType: "json"
+  })
+    .done(function(data) {
+      listDb = data.results;
       renderUserList(listDb);
       listernerSearchInput();
-    }
-  });
+    })
+    .fail(function() {
+      var box = document.createElement('div')
+      box.className = 'error'
+      var txt = document.createElement('h1')
+      txt.textContent = 'Falha ao carregar lista de clientes, tente novamente.'
+      document.getElementById('ul-wrapper').appendChild(box).appendChild(txt)
+    });
 }
-
 
 function renderUserList(listUserData) {
   var id3 = 0;
@@ -37,92 +43,104 @@ function renderUserList(listUserData) {
   var template = "<ul id='ul'>";
   template += "<li id='li'>";
 
-  if(isSet){
+  if (isSet) {
     for (let i = 0; i < listUserData.length; i++) {
       id2++;
-      id3++
-      listUserData[i].id.value = i
-      template += '<div class="clients-menu" id="'+ id2 + '">';
+      id3++;
+      listUserData[i].id.value = i;
+      template += '<div class="clients-menu" id="box' + id2 + '">';
       template += '<div class="clients-box">';
       template += '<div class="container">';
       template +=
-      '<div class="item basis-auto img" id="' + (id2+3) + '"><img id="' + (id2+5) + '" src="' +
-      listUserData[i].picture.thumbnail +
-      '">';
+        '<div class="item basis-auto img" id="img' +
+        id2 +
+        '"><img id="picture' +
+        id2 +
+        '" src="' +
+        listUserData[i].picture.thumbnail +
+        '">';
       template +=
-      '<div class="item name" id="name"><a href="profile.html? '+ count +' ">' +
-      listUserData[i].name.first +
-      "</a>";
+        '<div class="item name" id="name"><a href="profile.html? ' +
+        count +
+        ' ">' +
+        listUserData[i].name.first +
+        "</a>";
       template += "</div><div class='item  mail'>" + listUserData[i].email;
       template += "</div><div class='item  phone'>" + listUserData[i].phone;
       template +=
-      "</div><div class='item local' id='local'><span>" +
-      listUserData[i].location.city +
-      " - " +
-      listUserData[i].location.state;
+        "</div><div class='item local' id='local'><span>" +
+        listUserData[i].location.city +
+        " - " +
+        listUserData[i].location.state;
       template += "</span></div><div class='ic'>";
       template +=
-      "<i class='fas fa-trash icons' onclick='deleteUser(" +
-      id2 +
-      ")'></i><i class='fas fa-check icons' id='iconCheck" + id3 +
-      "' onclick='checkUser(" + id3 +")'></i><a style='a:visited{color: inherit}' href='profile.html? " +
-      i +
-      " '><i class='fas fa-th-list icons'></i></a>";
+        "<i class='fas fa-trash icons' onclick='deleteUser(" + id2 + ")'>";
+      template +=
+        "</i><i class='fas fa-check icons' id='iconCheck" +
+        id3 +
+        "' onclick='checkUser(" +
+        id3 +
+        ")'></i><a style='a:visited{color: inherit}' href='profile.html? " +
+        i +
+        " '><i class='fas fa-th-list icons'></i></a>";
       template += "</div></div>";
       template += "</div></div></div></div></div></div></div></div>";
     }
   }
   template += "</li>";
   template += "</ul>";
-  var x = document.createRange().createContextualFragment(template)
-  document.getElementById('ul-wrapper').appendChild(x)
+  var x = document.createRange().createContextualFragment(template);
+  document.getElementById("ul-wrapper").appendChild(x);
 }
 
 function deleteUser(id) {
-  loading(id+3,id+5)
-  setTimeout(function(){
-    document.getElementById(id).remove();
-  },1300)
+  loading("img" + id, id);
+  setTimeout(function() {
+    document.getElementById("box" + id).remove();
+  }, 1300);
   count--;
-  isSet = false
-  setUsersNumber(count)
-  getUserData(url--)
+  isSet = false;
+  setUsersNumber(count);
+  getUserData(url--);
 }
 
 function checkUser(id) {
-  var x = document.getElementById("iconCheck"+ id);
-  x.style.color = "#9ac321";
+  var x = document.getElementById("iconCheck" + id);
+  if (x.style.color === "rgb(154, 195, 33)") {
+    x.style.color = "#ababab";
+  } else {
+    x.style.color = "#9ac321";
+  }
 }
 
 function listernerSearchInput() {
-  var searchInput = document.getElementById('searchBar');
-  searchInput.addEventListener('keyup', function(keydown) {
+  var searchInput = document.getElementById("searchBar");
+  searchInput.addEventListener("keyup", function(keydown) {
     filtered = listDb.filter(function(res) {
       return res.name.first.match(keydown.target.value);
     });
-    clearList()
-    renderUserList(filtered)
+    clearList();
+    renderUserList(filtered);
   });
 }
 
-function setUsersNumber(n){
-  localStorage.setItem('number', n)
+function setUsersNumber(n) {
+  localStorage.setItem("number", n);
 }
 
-function getUsersNumber(){
-  localStorage.getItem('number')
-  return usersNumber
+function getUsersNumber() {
+  localStorage.getItem("number");
+  return usersNumber;
 }
 
-function clearList(){
-  document.getElementById('li').remove()
+function clearList() {
+  document.getElementById("li").remove();
 }
 
-function loading(idGif, idImg){
-  var gif = document.createElement('img')
-  gif.src = '../_imagens/gif-loader.gif'
-  gif.id = 'gif'
-  document.getElementById(idGif).appendChild(gif)
-  document.getElementById(idImg).style.opacity = '0.2'
+function loading(idGif, idImg) {
+  var gif = document.createElement("img");
+  gif.src = "_imagens/gif-loader.gif";
+  gif.id = "gif";
+  document.getElementById(idGif).appendChild(gif);
+  document.getElementById("picture" + idImg).style.opacity = "0.2";
 }
-
