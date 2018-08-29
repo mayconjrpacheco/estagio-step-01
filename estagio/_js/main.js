@@ -147,6 +147,7 @@ function loading(idGif, idImg) {
   document.getElementById("picture" + idImg).style.opacity = "0.2";
 }
 
+
 function displayMenu(){
   if(menu.style.display == 'none'){
     menu.style.display = 'block'
@@ -154,3 +155,4 @@ function displayMenu(){
     menu.style.display = 'none'
   }
 }
+

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="_css/responsive.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
-        crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
@@ -30,15 +30,41 @@
         </div>
     </div>
     <div id="menu-mobile">
-
+        <table class="table-mobile">
+            <tr>
+                <th class="th-list"><i class="fas fa-th-list"></i></th>
+                <th><i class="fas fa-check-double"></i></th>
+                <th><i class="fas fa-trash garbage"></i></th>
+            </tr>
+            <tr>
+                <td class="td-list">Todos</td>
+                <td>Atendidos</td>
+                <td>Lixeira</td>
+            </tr>
+        </table>
     </div>
     <div class="side-menu" id="x">
-        <i class="fas fa-th-list"></i>
-        <h3>Todos</h3>
+        <table>
+            <tr class="all-clients">
+                <th><i class="fas fa-th-list"></i></th>
+                <td>Todos</td>
+            </tr>
+            <tr>
+                <th><i class="fas fa-check-double"></i></th> 
+                <td>Atendidos</td>
+            </tr>
+            <tr>
+                <th><i class="fas fa-trash garbage"></i></i></th>
+                <td>Lixeira</td>
+            </tr>
+        </table>
     </div>
-    <div id="ul-wrapper">
-    </div>
-    <script src="./_js/main.js"></script>
+    
+    
+</div>
+<div id="ul-wrapper">
+</div>
+<script src="./_js/main.js"></script>
 </body>
 
 </html>

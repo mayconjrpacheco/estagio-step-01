@@ -13,6 +13,14 @@ a:visited {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
+h1{
+  text-transform: capitalize
+}
+
 /* navigation bar */
 
 .nav-bar {
@@ -116,23 +124,22 @@ input:focus {
     -12px 8px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 10px -7px rgba(0, 0, 0, 0.2);
 }
 
-.side-menu .fa-th-list {
-  font-size: 150%;
-  color: #9ac321;
-  float: right;
-  flex-grow: 1;
-  flex-basis: auto;
-  display: flex;
+.side-menu table{
+  color: #87868A
 }
 
-.side-menu h3 {
-  color: #9ac321;
-  float: right;
-  display: flex;
-  flex-grow: 1;
-  flex-basis: auto;
-  margin-top: 1%;
-  font-size: 130%;
+.side-menu table th, td{
+  font-size: 1.5em;
+  padding: 5%;
+  cursor: pointer
+}
+
+.side-menu table th{
+  padding-left: 5%
+}
+
+.all-clients{
+  color: #9ac321
 }
 
 #gif {
@@ -242,9 +249,7 @@ input:focus {
   width: 20%;
 }
 
-ul {
-  list-style: none;
-}
+
 
 .ic {
   width: 10vw;

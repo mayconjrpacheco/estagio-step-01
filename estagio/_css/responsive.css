@@ -1,10 +1,31 @@
 #menu-mobile{
-  display: none;
-  background-color: #FFFFFF;
   height: 25vh;
+  padding: 5%;
+  background-color: #FFFFFF;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 8px 12px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
-/* media queries index*/
+#menu-mobile .wrapper{
+  display: flex
+}
+#menu-mobile h3{
+  position: relative;
+  float: left;
+}
+
+.table-mobile{
+  color: #87868A
+}
+
+.table-mobile tbody tr .th-list,
+.td-list{
+  color: #9ac321
+}
+
+.table-mobile th{
+  font-size: 30px
+}
+
+/*///////////////////// media queries index //////////////////////////*/
 
 @media screen and (max-width: 600px) {
   #name{
@@ -50,40 +71,62 @@
   .clients-menu {
     flex-direction: inherit;
   }
+  .item .phone{
+    width: 28vw;
+    margin-top: 8%;
+  }
+  .clients-box .container #local {
+    width: 20vw;
+    width: 100%;
+    margin-top: 10%;
+  }
+  .container .mail {
+    width: auto;
+    margin-top: 8%;
+  }
+}
+
+
+
+@media (min-width: 601px) and (max-width: 799px) {
+  .side-menu{
+    width: 20%
+  }
+  .side-menu table{
+    font-size: 80%;
+  }
+  .clients-box{
+    height: 15vh;
+  }
+  .ic{
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+  .mail{
+    height: 80%;
+    word-break: break-all;
+  }
   
 }
 
-@media only screen and (max-width: 900px) {
-  .img .phone {
-    margin-left: 8%;
-    width: 200px;
-    margin-left: 30%;
-  }
-  #name {
-    width: none;
-  }
-  .container .mail {
-    width: 60vw;
-  }
-  .img {
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-}
-
-@media (max-width: 1225px) {
+@media (min-width: 800px) and (max-width: 1225px) {
+  
   .side-menu {
-    width: 10%;
+    width: 15%;
   }
   .phone {
     margin-left: 8%;
     width: 10vw;
   }
+  .side-menu table th, td{
+    font-size: 100%;
+    padding: 5%;
+    cursor: pointer
+  }
 }
 
-/* media queries profile */
+/*//////////////////// media queries profile //////////////////// */
 
 @media screen and (max-width: 600px) {
   .profile-card{
@@ -101,6 +144,10 @@
   }
   #btn{
     margin-bottom: 2%;
+  }
+  .profile-card h1{
+    word-break: break-all;
+    padding: 0 30px;
   }
 }
 

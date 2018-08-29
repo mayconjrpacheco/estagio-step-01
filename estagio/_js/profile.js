@@ -3,6 +3,7 @@ var url = location.search.slice(4);
 var card, h3 , t, t2, h1
 var formatedDate = "";
 
+
 var title = [
   "Hi, My name is",
   "My email adress is",
@@ -36,9 +37,8 @@ function renderUserProfile(profileData){
   card = document.createElement("img");
   h3 = document.createElement("h3");
   t = document.createTextNode(title[0]);
-  t2 = document.createTextNode(profileData[0].name.first);
+  t2 = document.createTextNode(captalize(profileData[0].name.first));
   h1 = document.createElement("h1");
-  h1.id = 'email';
   h3.appendChild(t);
   h1.appendChild(t2);
   
@@ -90,4 +90,14 @@ function changeInfo(dataUser){
 function formatDate(date){
     formatedDate = date.slice(0,10)
     return formatedDate
+}
+
+
+
+function captalize(word){
+  var halfWord = word.substring(1, word.lenght);
+  var firstLetter = word.substring(0,1)
+  var firstLetterUp = firstLetter.toUpperCase()
+  firstLetterUp += halfWord
+  return firstLetterUp
 }
