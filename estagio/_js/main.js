@@ -5,6 +5,8 @@ var isSet = true;
 var filtered = [];
 var emailFiltered = [];
 var isChecked = false;
+var menu =  document.getElementById('menu-mobile')
+menu.style.display = 'none'
 
 if (!usersNumber) {
   setUsersNumber(count);
@@ -23,18 +25,18 @@ function getUserData(count) {
     url: "https://randomuser.me/api/?results=" + count + "&nat=br&format=json",
     dataType: "json"
   })
-    .done(function(data) {
-      listDb = data.results;
-      renderUserList(listDb);
-      listernerSearchInput();
-    })
-    .fail(function() {
-      var box = document.createElement('div')
-      box.className = 'error'
-      var txt = document.createElement('h1')
-      txt.textContent = 'Falha ao carregar lista de clientes, tente novamente.'
-      document.getElementById('ul-wrapper').appendChild(box).appendChild(txt)
-    });
+  .done(function(data) {
+    listDb = data.results;
+    renderUserList(listDb);
+    listernerSearchInput();
+  })
+  .fail(function() {
+    var box = document.createElement('div')
+    box.className = 'error'
+    var txt = document.createElement('h1')
+    txt.textContent = 'Falha ao carregar lista de clientes, tente novamente.'
+    document.getElementById('ul-wrapper').appendChild(box).appendChild(txt)
+  });
 }
 
 function renderUserList(listUserData) {
@@ -42,7 +44,7 @@ function renderUserList(listUserData) {
   var id2 = 0;
   var template = "<ul id='ul'>";
   template += "<li id='li'>";
-
+  
   if (isSet) {
     for (let i = 0; i < listUserData.length; i++) {
       id2++;
@@ -52,37 +54,37 @@ function renderUserList(listUserData) {
       template += '<div class="clients-box">';
       template += '<div class="container">';
       template +=
-        '<div class="item basis-auto img" id="img' +
-        id2 +
-        '"><img id="picture' +
-        id2 +
-        '" src="' +
-        listUserData[i].picture.thumbnail +
-        '">';
+      '<div class="item basis-auto img" id="img' +
+      id2 +
+      '"><img id="picture' +
+      id2 +
+      '" src="' +
+      listUserData[i].picture.thumbnail +
+      '">';
       template +=
-        '<div class="item name" id="name"><a href="profile.html? ' +
-        count +
-        ' ">' +
-        listUserData[i].name.first +
-        "</a>";
+      '<div class="item name" id="name"><a href="profile.html? ' +
+      count +
+      ' ">' +
+      listUserData[i].name.first +
+      "</a>";
       template += "</div><div class='item  mail'>" + listUserData[i].email;
       template += "</div><div class='item  phone'>" + listUserData[i].phone;
       template +=
-        "</div><div class='item local' id='local'><span>" +
-        listUserData[i].location.city +
-        " - " +
-        listUserData[i].location.state;
+      "</div><div class='item local' id='local'><span>" +
+      listUserData[i].location.city +
+      " - " +
+      listUserData[i].location.state;
       template += "</span></div><div class='ic'>";
       template +=
-        "<i class='fas fa-trash icons' onclick='deleteUser(" + id2 + ")'>";
+      "<i class='fas fa-trash icons' onclick='deleteUser(" + id2 + ")'>";
       template +=
-        "</i><i class='fas fa-check icons' id='iconCheck" +
-        id3 +
-        "' onclick='checkUser(" +
-        id3 +
-        ")'></i><a style='a:visited{color: inherit}' href='profile.html? " +
-        i +
-        " '><i class='fas fa-th-list icons'></i></a>";
+      "</i><i class='fas fa-check icons' id='iconCheck" +
+      id3 +
+      "' onclick='checkUser(" +
+      id3 +
+      ")'></i><a style='a:visited{color: inherit}' href='profile.html? " +
+      i +
+      " '><i class='fas fa-th-list icons'></i></a>";
       template += "</div></div>";
       template += "</div></div></div></div></div></div></div></div>";
     }
@@ -143,4 +145,12 @@ function loading(idGif, idImg) {
   gif.id = "gif";
   document.getElementById(idGif).appendChild(gif);
   document.getElementById("picture" + idImg).style.opacity = "0.2";
+}
+
+function displayMenu(){
+  if(menu.style.display == 'none'){
+    menu.style.display = 'block'
+  }else{
+    menu.style.display = 'none'
+  }
 }

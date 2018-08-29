@@ -1,77 +1,89 @@
-@media screen and (max-width: 600px) {
-    #icon1 {
-      display: none;
-    }
-    .side-menu {
-      display: none;
-    }
-    #btn-small {
-      display: initial;
-    }
-    .clients-box {
-      width: 95vw;
-      height: 300px;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .item img {
-      width: 80px;
-      height: 80px;
-    }
-    .basis-auto {
-      width: 50%;
-      flex: 1 1 auto;
-      flex-direction: column;
-      margin-top: 2%;
-    }
-    .ic {
-      display: flow-root;
-      width: 80vw;
-      padding: 0 5%;
-      font-size: 2em;
-    }
-    ul {
-      padding: 0;
-    }
-    .clients-menu {
-      flex-direction: inherit;
-    }
-  }
-  
-  @media only screen and (max-width: 900px) {
-    .img .phone {
-      margin-left: 8%;
-      width: 200px;
-      margin-left: 30%;
-    }
-    #name {
-      width: none;
-    }
-    .container .mail {
-      width: 60vw;
-    }
-    .img {
-      width: 100%;
-    }
-  }
-  
-  @media (min-width: 992px) {
-  }
-  
-  @media (max-width: 1225px) {
-    .side-menu {
-      width: 10%;
-    }
-    .phone {
-      margin-left: 8%;
-      width: 10vw;
-    }
-  }
+#menu-mobile{
+  display: none;
+  background-color: #FFFFFF;
+  height: 25vh;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 8px 12px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+/* media queries index*/
 
-  /* media queries */
+@media screen and (max-width: 600px) {
+  #name{
+    padding-top: 3%
+  }
+  #icon1 {
+    display: none;
+  }
+  .side-menu {
+    display: none;
+  }
+  #btn-small {
+    display: initial;
+  }
+  .clients-box {
+    width: 95vw;
+    height: 300px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .item img {
+    width: 80px;
+    height: 80px;
+  }
+  .basis-auto {
+    width: 50%;
+    flex: 1 1 auto;
+    flex-direction: column;
+    margin-top: 2%;
+  }
+  .ic {
+    display: flow-root;
+    width: 80vw;
+    padding: 0 5%;
+    font-size: 2em;
+  }
+  ul {
+    padding: 0;
+  }
+  .clients-menu {
+    flex-direction: inherit;
+  }
+  
+}
+
+@media only screen and (max-width: 900px) {
+  .img .phone {
+    margin-left: 8%;
+    width: 200px;
+    margin-left: 30%;
+  }
+  #name {
+    width: none;
+  }
+  .container .mail {
+    width: 60vw;
+  }
+  .img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (max-width: 1225px) {
+  .side-menu {
+    width: 10%;
+  }
+  .phone {
+    margin-left: 8%;
+    width: 10vw;
+  }
+}
+
+/* media queries profile */
 
 @media screen and (max-width: 600px) {
   .profile-card{
