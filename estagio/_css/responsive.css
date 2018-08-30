@@ -51,7 +51,7 @@
   }
   .item img {
     width: 5em;
-    height: 5em;
+    height: auto;
   }
   .basis-auto {
     width: 50%;
@@ -73,7 +73,7 @@
   }
   .item .phone{
     width: 28vw;
-    margin-top: 8%;
+    margin: 8% 0 8% 20%;
   }
   .clients-box .container #local {
     width: 20vw;
