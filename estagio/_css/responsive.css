@@ -27,7 +27,7 @@
 
 /*///////////////////// media queries index //////////////////////////*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 630px) {
   #name{
     padding-top: 3%
   }
@@ -50,8 +50,8 @@
     align-items: center;
   }
   .item img {
-    width: 80px;
-    height: 80px;
+    width: 5em;
+    height: 5em;
   }
   .basis-auto {
     width: 50%;
@@ -97,7 +97,7 @@
 
 
 
-@media (min-width: 601px) and (max-width: 799px) {
+@media (min-width: 631px) and (max-width: 799px) {
   .side-menu{
     width: 20%
   }
@@ -105,12 +105,13 @@
     font-size: 80%;
   }
   .clients-box{
-    height: 15vh;
+    height: 100%;
   }
   .ic{
     flex-direction: column;
     padding: 0;
     align-items: center;
+    min-width: 20%;
   }
   .mail{
     height: 80%;
@@ -120,6 +121,7 @@
 }
 
 @media (min-width: 800px) and (max-width: 1225px) {
+
   .side-menu {
     width: 15%;
   }
@@ -133,11 +135,12 @@
     cursor: pointer
   }
   .clients-box{
-    height: 15vh;
+    height: 100%;
   }
   .ic{
     flex-direction: column;
     padding: 0;
+    margin: 2% 0;
     align-items: center;
   }
   .container .mail {
