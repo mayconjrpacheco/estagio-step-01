@@ -18,7 +18,7 @@
 
 .table-mobile tbody tr .th-list,
 .td-list{
-  color: #9ac321
+  color: #9ac321;
 }
 
 .table-mobile th{
@@ -88,6 +88,11 @@
     font-size: 1.5em;
     cursor: pointer
   }
+  .nav-bar .logo-col img {
+    height: 30px;
+    width: auto;
+  }
+  
 }
 
 

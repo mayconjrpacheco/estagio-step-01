@@ -117,9 +117,9 @@ function checkUser(id) {
 
 function listernerSearchInput() {
   var searchInput = document.getElementById("searchBar");
-  searchInput.addEventListener("keyup", function(keydown) {
+  searchInput.addEventListener("keyup", function(keyup) {
     filtered = listDb.filter(function(res) {
-      return res.name.first.match(keydown.target.value);
+      return res.name.first.match(keyup.target.value.toLowerCase());
     });
     clearList();
     renderUserList(filtered);
