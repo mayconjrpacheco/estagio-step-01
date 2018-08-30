@@ -54,7 +54,7 @@ function renderUserList(listUserData) {
       template += '<div class="clients-box">';
       template += '<div class="container">';
       template +=
-      '<div class="item basis-auto img" id="img' +
+      '<div class="basis-auto img" id="img' +
       id2 +
       '"><img id="picture' +
       id2 +
@@ -62,7 +62,7 @@ function renderUserList(listUserData) {
       listUserData[i].picture.thumbnail +
       '">';
       template +=
-      '<div class="item name" id="name"><a href="profile.html? ' +
+      '</div><div class="item name" id="name"><a href="profile.html? ' +
       count +
       ' ">' +
       listUserData[i].name.first +
@@ -85,7 +85,6 @@ function renderUserList(listUserData) {
       ")'></i><a style='a:visited{color: inherit}' href='profile.html? " +
       i +
       " '><i class='fas fa-th-list icons'></i></a>";
-      template += "</div></div>";
       template += "</div></div></div></div></div></div></div></div>";
     }
   }

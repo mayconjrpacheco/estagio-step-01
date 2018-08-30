@@ -28,6 +28,9 @@
 /*///////////////////// media queries index //////////////////////////*/
 
 @media screen and (max-width: 630px) {
+  .nav-bar{
+    background-color: red
+  }
   #name{
     padding-top: 3%
   }
@@ -120,44 +123,148 @@
   
 }
 
-@media (min-width: 800px) and (max-width: 1225px) {
-
-  .side-menu {
-    width: 15%;
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .nav-bar{
+    height: 90px;
   }
-  .phone {
-    margin-left: 8%;
-    width: 10vw;
+  .name,
+  .mail,
+  .phone,
+  .local,
+  .ic{
+    font-size: 160%;
   }
-  .side-menu table th, td{
-    font-size: 100%;
-    padding: 5%;
-    cursor: pointer
+  img{
+    width: 85%;
+  }
+  .container .mail{
+    width: 20%;
   }
   .clients-box{
-    height: 100%;
+    height: 180px;
   }
   .ic{
-    flex-direction: column;
-    padding: 0;
-    margin: 2% 0;
-    align-items: center;
+    width: 5%;
+    display:  flex;
+    flex-direction:  column;
+    margin-left: 3%;
+  }
+  .clients-box .container #local {
+    width: 20;
+    width: 15%;
+    margin-left: 2%;
+    word-break:  break-all;
+  }
+  .nav-bar .logo-col img {
+    width: 6em;
+    height: auto;
   }
   .container .mail {
     word-break: break-all;
   }
+  table{
+    font-size: 15px;
+  }
+  .container .phone {
+    width: 20%;
+    font-weight: 900;
+  }
+  #name{
+    margin-left: 2%;
+    width: 15%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .nav-bar{
+    height: 90px;
+  }
+  .name,
+  .mail,
+  .phone,
+  .local,
+  .ic{
+    font-size: 160%;
+  }
+  img{
+    width: 85%;
+  }
+  .container .mail{
+    width: 20%;
+  }
+  .clients-box{
+    height: 180px;
+  }
+  .ic{
+    width: 18%
+  }
+  .clients-box .container #local {
+    width: 15%;
+  }
+  .nav-bar .logo-col img {
+    width: 6em;
+    height: auto;
+  }
+  .container .mail {
+    word-break: break-all;
+    margin-left: 3%;
+  }
+  table{
+    font-size: 18px;
+  }
+  .container .phone {
+    width: 20%;
+    font-weight: 900;
+  }
+  #name{
+    margin-left: 2%
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1799px){
+  .nav-bar{
+    height: 90px;
+  }
+  .name,
+  .mail,
+  .phone,
+  .local,
+  .ic{
+    font-size: 160%;
+  }
+  img{
+    width: 85%;
+  }
+  .container .mail{
+    width: 20%;
+  }
+  .clients-box{
+    height: 120px;
+  }
+  .ic{
+    width: 18%
+  }
+  .clients-box .container #local {
+    width: 20%;
+    padding-left: 5%;
+  }
+  .nav-bar .logo-col img {
+    width: 6em;
+    height: auto;
+  }
+  
 }
 
 @media (min-width: 1800px) and (max-width: 2299px){
   .nav-bar{
     height: 130px;
   }
-
+  
   .nav-bar .logo-col img {
     height: 60%;
     width: auto
   }
-
+  
   .nav-bar .search-field {
     width: 110%;
     height: 40px;
@@ -175,7 +282,7 @@
   .phone,
   .local,
   .ic{
-    font-size: 150%
+    font-size: 160%;
   }
 }
 
@@ -183,10 +290,11 @@
   .nav-bar{
     height: 180px;
   }
-  .nav-bar .logo-col img {
-    height: 130px;
-    width: auto
+  
+  img{
+    width: 50%
   }
+  
   .nav-bar .search-field {
     width: 110%;
     height: 60px;
@@ -194,19 +302,24 @@
   .side-menu table th, td{
     font-size: 3em;
   }
-  .item img {
-    width: 100px;
-    height: 90px;
-  }
-
+  
   .nav-bar .search-col .fa-search {
     font-size: 250%;
-
-}
-
-.nav-bar .search-field input {
-  font-size: 38px;
-}
+    
+  }
+  
+  #local{
+    padding-left: 3%
+  }
+  
+  .nav-bar .logo-col img {
+    width: 30%;
+    height: auto;
+  }
+  
+  .nav-bar .search-field input {
+    font-size: 38px;
+  }
   .fa-user-circle{
     font-size: 130px;
   }
@@ -216,7 +329,11 @@
   .phone,
   .local,
   .ic{
-    font-size: 210%
+    font-size: 260%;
+  }
+  
+  .clients-box{
+    height: 130px;
   }
 }
 /*//////////////////// media queries profile //////////////////// */
