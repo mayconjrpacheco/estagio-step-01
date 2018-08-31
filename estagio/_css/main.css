@@ -17,8 +17,8 @@ ul {
   list-style: none;
 }
 
-h1{
-  text-transform: capitalize
+h1 {
+  text-transform: capitalize;
 }
 
 /* navigation bar */
@@ -121,26 +121,28 @@ input:focus {
     -12px 8px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 10px -7px rgba(0, 0, 0, 0.2);
 }
 
-.side-menu table{
-  color: #87868A
+.side-menu table {
+  color: #87868a;
 }
 
-.side-menu table th, td{
+.side-menu table th,
+td {
   font-size: 1.2em;
   padding: 5%;
-  cursor: pointer
+  cursor: pointer;
 }
 
-.side-menu table th{
-  padding-left: 5%
+.side-menu table th {
+  padding-left: 5%;
 }
 
-.all-clients{
-  color: #9ac321
+.all-clients {
+  color: #9ac321;
 }
 
 #gif {
   position: absolute;
+  width: 8%;
 }
 
 .clients-menu {
@@ -179,12 +181,11 @@ input:focus {
   color: #9ac321;
 }
 
-
 .basis-auto {
-  justify-content:  center;
+  justify-content: center;
   width: 10%;
-  display:  flex;
-  align-items:  center;
+  display: flex;
+  align-items: center;
 }
 
 .basis-auto-grow-2 {
@@ -207,14 +208,15 @@ input:focus {
   border: 1px solid #ccc;
 }
 
-img {
-  width: 54%;
+.basis-auto img {
   border: 50%;
   border-radius: 100%;
 }
 
-.icons {
-  padding: 6%;
+.icons,
+.fa-th-list {
+  color: #ababab;
+  padding: 6% 6% 6% 0;
 }
 
 .clients-box .container #name {
@@ -226,7 +228,7 @@ img {
 }
 
 .clients-box .container #local {
-  width: 25%;
+  width: 20%;
   text-transform: capitalize;
   text-align: -webkit-auto;
 }
@@ -240,7 +242,7 @@ img {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   word-break: break-all;
-  padding-right:  2%;
+  padding-right: 2%;
 }
 
 .container .phone {
@@ -249,15 +251,13 @@ img {
   text-align: -webkit-auto;
 }
 
-
-
 .ic {
   padding-left: 0.5%;
   width: 15%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:  center;
+  justify-content: center;
 }
 
 .error {
@@ -265,11 +265,8 @@ img {
   text-align: center;
   width: 80%;
   height: auto;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 2% 15% 0 15%;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
     8px 12px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
-
-
-
