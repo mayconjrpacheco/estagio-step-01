@@ -57,7 +57,7 @@ function changeInfo(dataUser){
   switch (dataUser) {
     case 'name':
     t.nodeValue = title[0];
-    t2.nodeValue = profile[0].name.first
+    t2.nodeValue = captalize(profile[0].name.first)
     break;
     case 'email':
     t.nodeValue = title[1];
