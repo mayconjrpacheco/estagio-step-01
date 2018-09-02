@@ -63,21 +63,22 @@ function renderUserList(listUserData) {
         id2 +
         '" src="' +
         listUserData[i].picture.thumbnail +
-        '">';
+        '"></div>';
+      template += '<div class="name-email-phone">'
       template +=
-        '</div><div class="item name" id="name"><a href="profile.html? ' +
+        '<div class="name-email"><div class="item name" id="name"><a href="profile.html? ' +
         count +
         ' ">' +
         listUserData[i].name.first +
         "</a>";
       template += "</div><div class='item  mail'>" + listUserData[i].email;
-      template += "</div><div class='item  phone'>" + listUserData[i].phone;
+      template += "</div></div><div class='item  phone'>" + listUserData[i].phone;
       template +=
         "</div><div class='item local' id='local'><span>" +
         listUserData[i].location.city +
         " - " +
         listUserData[i].location.state;
-      template += "</span></div><div class='ic'>";
+      template += "</span></div></div><div class='ic'>";
       template +=
         "<i class='fas fa-trash icons' onclick='deleteUser(" + id2 + ")'>";
       template +=
