@@ -12,10 +12,8 @@
     );
     height: 100vh;
   }
-  #info,
-  h1,
-  h3 {
-    color: rosybrown;
+  h1{
+    font-size: 120%
   }
   .profile-card {
     border-radius: 8px;
@@ -36,11 +34,7 @@
 
 /* Medium devices (tablets) */
 @media (min-width: 575.99px) and (max-width: 767.98px) {
-  #info,
-  h1,
-  h3 {
-    color: green;
-  }
+  
   .background {
     padding: 1% 6%;
   }
@@ -58,11 +52,6 @@
 
 /* Large devices (desktops) */
 @media (min-width: 767.99px) and (max-width: 991.98px) {
-  #info,
-  h1,
-  h3 {
-    color: blue;
-  }
   .background {
     padding: 2%;
   }
@@ -70,7 +59,7 @@
     margin-top: 1.5%;
   }
   .profile-card {
-    height: 93%;
+    height: 90%;
   }
   .profile-card .picture {
     width: 150px;
@@ -78,15 +67,8 @@
     border-radius: 50%;
   }
   .profile-card .profile-icons {
-    margin-top: 2%;
+    margin-top: 5%
   }
 }
 
-/* Extra large devices (large desktops) */
-@media (min-width: 991.99px) and (max-width: 1199.98px) {
-  #info,
-  h1,
-  h3 {
-    color: red;
-  }
-}
+

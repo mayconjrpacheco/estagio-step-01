@@ -151,9 +151,5 @@ function loading(idGif, idImg) {
 }
 
 function displayMenu() {
-  if (menu.style.display == "none") {
-    menu.style.display = "block";
-  } else {
-    menu.style.display = "none";
-  }
+    $('#menu-mobile').slideToggle(500)
 }
