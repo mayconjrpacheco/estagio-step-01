@@ -1,60 +1,84 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="../_css/main.css">
-        <title>Front End</title>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    </head>
-    <body>
-        
-        <div class="container-navbar">
-            <div class="logo">
-                <img src="../img/logo-zup-white.svg" alt="logo" width="80px" height="80px">
-            </div>
-            <div class="barradebusca">
+<head>
+    <meta charset="utf-8" />
+
+    <title>Front End</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../_css/main.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="nav-bar row">
+        <div class="logo-col" id="logo">
+            <img src="../img/logo-zup-white.svg">
+        </div>
+        <div class="search-col">
+            <div class="search-field">
                 <i class="fas fa-search"></i>
-                <input type="text" class="txtBusca" placeholder="Buscar"/>
+                <input type="text" placeholder="Buscar" id="searchBar">
             </div>
-
-            <div class="icone">
-                <i class="fas fa-user-alt"></i>
-            </div>
-            
         </div>
-    
-        <div class="container-conteudo">
-
-            <div class="lateral-navbar">
-                <a class="fas fa-list"> Todos </a>
-                <a class="fas fa-check-double"> Atendidos </a>
-                <a class="fas fa-trash"> Lixeira </a>
-                
-            </div>
-
-            <div class="container-listagem">
-                    <div class="listagem">
-                            <div class="foto"> <img src="../img/yasuo-high-noon.png" alt="yasuo" width="40px" height="40px"></div>
-                            <div class="nome"> <b>Yasuo</b> </div>
-                            <div class="email"> <p>yasuo@vemprox1.com</p> </div>
-                            <div class="contato"> <p>(xx) x xxxx-xxxx</p> </div>
-                            <div class="cidade"> <p>Samuels Drift-PC</p> </div>
-                            <div class="icones"> <a class="fas fa-trash"></a> <a class="fas fa-list"></a> <a class="fas fa-check"></a> </div>
-                        </div>
-                <div class="listagem">
-                        <div class="foto"> <img src="../img/yasuo-high-noon.png" alt="yasuo" width="40px" height="40px"></div>
-                        <div class="nome"> <b>Yasuo</b> </div>
-                        <div class="email   "> <p>yasuo@vemprox1.com</p> </div>
-                        <div class="contato"> <p>(686) 798-8768</p> </div>
-                        <div class="cidade"> <p>Samuels Drift-PC</p> </div>
-                        <div class="icones"> <a class="fas fa-trash"></a> <a class="fas fa-list"></a> <a class="fas fa-check" ></a> </div>
-                    </div>
-            </div>
-            
+        <div class="icon-col">
+            <i id="btn-small" class="fas fa-th-list" onclick="displayMenu()"></i>
+            <i id="icon1" class="fas fa-user-circle fa-3x"></i>
         </div>
-    </body>
+    </div>
+    <div id="menu-mobile">
+        <table class="table-mobile">
+            <tr>
+                <th class="th-list">
+                    <i class="fas fa-th-list"></i>
+                </th>
+                <th>
+                    <i class="fas fa-check-double"></i>
+                </th>
+                <th>
+                    <i class="fas fa-trash garbage" style="text-align: start;"></i>
+                </th>
+            </tr>
+            <tr>
+                <td class="td-list">Todos</td>
+                <td>Atendidos</td>
+                <td>Lixeira</td>
+            </tr>
+        </table>
+    </div>
+    <div class="side-menu" id="x">
+        <table>
+            <tr class="all-clients">
+                <th>
+                    <i class="fas fa-th-list"></i>
+                </th>
+                <td>Todos</td>
+            </tr>
+            <tr>
+                <th>
+                    <i class="fas fa-check-double"></i>
+                </th>
+                <td>Atendidos</td>
+            </tr>
+            <tr>
+                <th>
+                    <i class="fas fa-trash garbage"></i>
+                    </i>
+                </th>
+                <td>Lixeira</td>
+            </tr>
+        </table>
+    </div>
+
+
+    </div>
+    <div id="ul-wrapper">
+    </div>
     <script src="../js/main.js"></script>
+</body>
+
 </html>
