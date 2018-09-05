@@ -142,14 +142,6 @@ function clearList() {
   document.getElementById("li").remove();
 }
 
-function loading(idGif, idImg) {
-  var gif = document.createElement("img");
-  gif.src = "_imagens/gif-loader.gif";
-  gif.id = "gif";
-  document.getElementById(idGif).appendChild(gif);
-  document.getElementById("picture" + idImg).style.opacity = "0.2";
-}
-
 function displayMenu() {
     $('#menu-mobile').slideToggle(500)
 }
