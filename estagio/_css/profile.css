@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: red;
+}
+
+.background {
+  padding: 5% 20%;
+  background: linear-gradient(
+    0deg,
+    rgba(244, 244, 244, 1) 76%,
+    rgba(2, 0, 36, 0.9780287114845938) 76%,
+    rgba(44, 62, 80, 1) 76%
+  );
+  height: 100vh;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 72%,
+    rgba(223, 223, 223, 1) 72%,
+    rgba(242, 242, 242, 1) 73%
+  );
+  box-shadow: 0px 2px 20px 10px rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.border {
+  padding: 5px;
+  margin-top: 3%;
+  border: 1.2px solid #b9b9b9;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.profile-card img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.profile-card .picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.profile-card .profile-icons {
+  margin: 5%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.svg-inline--fa:not(#btn) {
+  display: inline-block;
+  font-size: 200%;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  color: #b9b9b9;
+  margin: 0px 30px;
+}
+
+.svg-inline--fa:hover:not(#btn) {
+  color: #9ac321;
+}
+
+.profile-card h1 {
+  margin: 0;
+}
+
+.btn {
+  display: flex;
+  position: fixed;
+  margin: 2%;
+  font-size: 40px;
+  color: white;
+}
+
+.btn-small {
+  display: none;
+}
+
+#info,
+h1,
+h3 {
+  text-align: center;
+}

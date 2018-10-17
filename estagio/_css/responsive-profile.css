@@ -1,0 +1,74 @@
+/*///////////////////// media queries profile //////////////////////////*/
+
+/*Small devices (landscape phones)*/
+@media (max-width: 575.98px) {
+  .background {
+    padding: 8% 2%;
+    background: linear-gradient(
+      0deg,
+      rgba(244, 244, 244, 1) 76%,
+      rgba(2, 0, 36, 0.9780287114845938) 76%,
+      rgba(44, 62, 80, 1) 76%
+    );
+    height: 100vh;
+  }
+  h1{
+    font-size: 120%
+  }
+  .profile-card {
+    border-radius: 8px;
+    height: 80%;
+  }
+  .border {
+    margin-top: 15%;
+  }
+  .profile-card .profile-icons {
+    flex-wrap: wrap;
+    margin: 10% 5%;
+    height: 25%;
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-evenly;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 575.99px) and (max-width: 767.98px) {
+  
+  .background {
+    padding: 1% 6%;
+  }
+  .profile-card {
+    height: 95%;
+  }
+  .profile-card .picture {
+    width: 100px;
+    height: 100px;
+  }
+  .profile-card .profile-icons {
+    margin: 5%;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 767.99px) and (max-width: 991.98px) {
+  .background {
+    padding: 2%;
+  }
+  .border {
+    margin-top: 1.5%;
+  }
+  .profile-card {
+    height: 90%;
+  }
+  .profile-card .picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .profile-card .profile-icons {
+    margin-top: 5%
+  }
+}
+
+

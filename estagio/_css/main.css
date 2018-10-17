@@ -1,0 +1,284 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+/* navigation bar */
+
+.nav-bar {
+  background-color: #2c3e50;
+  height: 70px;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  z-index: 999;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar .logo-col {
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.nav-bar .logo-col img {
+  width: 4em;
+  height: auto;
+}
+
+.nav-bar .search-col {
+  justify-content: center;
+  width: 60%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.nav-bar .icon-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.nav-bar .icon-col .fa-user-circle {
+  color: white;
+}
+
+.nav-bar .search-field {
+  width: 90%;
+  height: 30px;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  background-color: white;
+  display: flex;
+  padding: 0.3em 0.3em;
+  align-items: center;
+}
+
+.nav-bar .search-field input {
+  border: none;
+  width: 80%;
+  height: 80%;
+  font-size: 130%;
+  margin-left: 2%;
+  font-weight: bold;
+}
+
+.nav-bar .search-col .fa-search {
+  color: #9ac321;
+  font-size: 140%;
+  margin-left: 0.4em;
+}
+
+.nav-bar .search-field textarea:focus,
+input:focus {
+  outline: none;
+}
+
+#btn-small {
+  display: none;
+  font-size: 2em;
+  color: white;
+}
+
+/*menus*/
+
+.side-menu {
+  display: flex;
+  flex-direction: row;
+  height: calc(300vh - 70px);
+  width: 13%;
+  background-color: white;
+  float: left;
+  justify-content: space-around;
+  padding: 20px 0 0 0;
+  box-shadow: -7px 20px 38px 3px rgba(0, 0, 0, 0.14),
+    -12px 8px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 10px -7px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu table {
+  color: #87868a;
+}
+
+.side-menu table th,
+td {
+  font-size: 1.2em;
+  padding: 5%;
+  cursor: pointer;
+}
+
+.side-menu table th {
+  padding-left: 5%;
+}
+
+.all-clients {
+  color: #9ac321;
+}
+
+#gif {
+  position: absolute;
+  width: 8%;
+}
+
+.clients-menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 3px 30px;
+}
+
+/* clients item */
+
+.clients-box {
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    8px 12px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  height: 100px;
+  min-block-size: 10;
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #ababab;
+  cursor: pointer;
+}
+
+.fa-trash:hover,
+.fa-check:hover,
+.fa-th-list:hover {
+  color: #9ac321;
+}
+
+.basis-auto {
+  justify-content: center;
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.basis-auto-grow-2 {
+  flex: 2 1 auto;
+}
+
+.basis-auto-width {
+  flex: 1 1 auto;
+  width: 60px;
+}
+
+.basis-auto-grow-0 {
+  flex: 0 1 auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid #ccc;
+}
+
+.basis-auto img {
+  border: 50%;
+  border-radius: 100%;
+}
+
+.icons {
+  color: #ababab;
+  padding: 6% 6% 6% 0;
+}
+
+.name-email{
+  display: flex;
+  width: 55%;
+}
+
+.name-email-phone{
+  display: flex;
+  flex-direction: row;
+  width: 78%;
+}
+
+.clients-box .container #name {
+  width: 30%;
+  color: #2c3e50;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: -webkit-auto;
+}
+
+.clients-box .container #local {
+  width: 30%;
+  text-transform: capitalize;
+  text-align: -webkit-auto;
+}
+
+.container .mail {
+  width: 65%;
+  padding-left: 3%;
+  text-transform: lowercase;
+  text-align: -webkit-auto;
+  font-weight: 800;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  word-break: break-all;
+  padding-right: 2%;
+}
+
+.container .phone {
+  /* padding: 0 2%; */
+  width: 18%;
+  font-weight: 900;
+  text-align: -webkit-auto;
+  padding-left: 3%;
+}
+
+.ic {
+  padding-left: 2%;
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  padding: 1px;
+  text-align: center;
+  width: 80%;
+  height: auto;
+  background-color: #ffffff;
+  margin: 2% 15% 0 15%;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    8px 12px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
